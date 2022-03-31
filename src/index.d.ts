@@ -1,5 +1,3 @@
-import { ScriptElementKindModifier } from 'typescript';
-
 /*
 Типизируйте функцию getPersons, возвращающую массив объектов со следующими свойствами:
 - name - строка
