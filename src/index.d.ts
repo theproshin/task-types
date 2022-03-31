@@ -1,10 +1,14 @@
+import { ScriptElementKindModifier } from 'typescript';
+
 /*
 Типизируйте функцию getPersons, возвращающую массив объектов со следующими свойствами:
 - name - строка
 - age - число
 - gender - 'male' или 'female'
  */
-export function getPersons();
+type TPerson = { name: string; age: number; gender: 'male' | 'female' };
+type TPersons = TPerson[];
+export function getPersons(): TPersons;
 
 /*
 Типизируйте функцию personToString, возвращающую строку и принимающую объект одного из следующих форматов:
@@ -18,4 +22,6 @@ export function getPersons();
    - gender - 'male' или 'female'
    - company- строка
  */
-export function personToString(person);
+type TUser = { name: string; age: number; gender: 'male' | 'female' };
+type TEmploye = TUser & { company: string };
+export function personToString(person: TUser | TEmploye): string;
